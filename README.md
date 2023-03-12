@@ -1,2 +1,2 @@
 # HTTPClient
-Coding HTTP client in C#.
+Implementation of a HTTP client using C#.
