@@ -1,2 +1,3 @@
-2023/03/11-18:56:26.282 33f4 Creating DB D:\sebtr\Code\C#\HttpWebClient\bin\Release\HttpWebClient.exe.WebView2\EBWebView\Default\EdgeCoupons/coupons_data.db since it was missing.
-2023/03/11-18:56:26.298 33f4 Reusing MANIFEST D:\sebtr\Code\C#\HttpWebClient\bin\Release\HttpWebClient.exe.WebView2\EBWebView\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2023/03/13-09:20:42.155 17b0 Reusing MANIFEST D:\sebtr\Code\C#\HttpWebClient\bin\Release\HttpWebClient.exe.WebView2\EBWebView\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2023/03/13-09:20:42.156 17b0 Recovering log #3
+2023/03/13-09:20:42.157 17b0 Reusing old log D:\sebtr\Code\C#\HttpWebClient\bin\Release\HttpWebClient.exe.WebView2\EBWebView\Default\EdgeCoupons/coupons_data.db/000003.log 
