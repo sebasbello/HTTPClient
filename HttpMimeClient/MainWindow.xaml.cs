@@ -19,6 +19,9 @@ using System.Net.Mime;
 using System.IO;
 using Microsoft.Web.WebView2.Wpf;
 using MimeTypes;
+using Path = System.IO.Path;
+using System.Reflection;
+using Microsoft.Win32;
 
 namespace HttpMimeClient
 {
@@ -34,7 +37,7 @@ namespace HttpMimeClient
             InitializeComponent();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void Search_ButtonClick(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txt_url.Text))
             {
@@ -94,7 +97,7 @@ namespace HttpMimeClient
             }
         }
 
-        private void raw_radioButtonChecked(object sender, RoutedEventArgs e)
+        private void Raw_RadioButtonCheck(object sender, RoutedEventArgs e)
         {
             TextBlock txt_block = new TextBlock();
             txt_block.TextWrapping = TextWrapping.Wrap;
@@ -105,7 +108,7 @@ namespace HttpMimeClient
             this.sview_body.Content = txt_block;
         }
 
-        private void pretty_radioButtonChecked(object sender, RoutedEventArgs e)
+        private void Pretty_RadioButtonCheck(object sender, RoutedEventArgs e)
         {
             if (content_type.StartsWith("text/html"))
             {
@@ -116,6 +119,27 @@ namespace HttpMimeClient
                 this.sview_body.Content = null;
                 this.sview_body.Content = webView2;
             }
+        }
+
+        private void Download_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (content_text != "")
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Title = "Download",
+                    Filter = "Text Document (*.txt) | *.txt",
+                    FileName = ""
+                };
+
+                if (saveFileDialog.ShowDialog().Equals(true))
+                {
+                    StreamWriter streamWriter = new StreamWriter(File.Create(saveFileDialog.FileName));
+                    streamWriter.Write(content_text);
+                    streamWriter.Dispose();
+                }
+            }
+            
         }
     }
 }
