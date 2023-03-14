@@ -36,11 +36,11 @@ Margin="10,5,0,0" VerticalAlignment="Top" Width="68" SelectedIndex="0">
         </TabControl>
         <Label Content="HTTP Response:" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="104" FontWeight="Bold"/>
         <Label x:Name="lbl_statuscode" Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="63,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,-0.114" Width="676" FontWeight="Bold" FontSize="14"/>
-        <RadioButton Name="raw_radioButton" Grid.Column="1" Content="Raw" HorizontalAlignment="Left" Margin="40,72,0,0" VerticalAlignment="Top" IsEnabled="False" Checked="raw_radioButtonChecked"/>
-        <RadioButton Name="pretty_radioButton" Grid.Column="1" Content="Pretty" HorizontalAlignment="Left" Margin="93,72,0,0" VerticalAlignment="Top" IsEnabled="False" Checked="pretty_radioButtonChecked"/>
+        <RadioButton Name="raw_radioButton" Content="Raw" HorizontalAlignment="Left" Margin="12,73,0,0" VerticalAlignment="Top" IsEnabled="False" Checked="raw_radioButtonChecked" Grid.Column="1"/>
+        <RadioButton Name="pretty_radioButton" Grid.Column="1" Content="Pretty" HorizontalAlignment="Left" Margin="65,73,0,0" VerticalAlignment="Top" IsEnabled="False" Checked="pretty_radioButtonChecked"/>
         <Label Content="Show:" HorizontalAlignment="Left" Margin="11,66,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="58" FontWeight="Bold"/>
-        <Button Grid.Column="1" Content="Download" HorizontalAlignment="Left" Margin="598,70,0,0" VerticalAlignment="Top" Click="Button_Click" Width="61"/>
-        <Label Content="Content-Type:" HorizontalAlignment="Left" Margin="338,66,0,0" VerticalAlignment="Top" Width="104" FontWeight="Bold" Grid.Column="1"/>
-        <Label Name ="lbl_content_type" Content="" HorizontalAlignment="Left" Margin="433,66,0,0" VerticalAlignment="Top" Width="150" FontWeight="Normal" Grid.Column="1"/>
+        <Button Grid.Column="1" Content="Download" HorizontalAlignment="Left" Margin="381,72,0,0" VerticalAlignment="Top" Click="Button_Click" Width="61" RenderTransformOrigin="-1.931,0.663"/>
+        <Label Content="Content-Type:" HorizontalAlignment="Left" Margin="130,68,0,0" VerticalAlignment="Top" Width="91" FontWeight="Bold" Grid.Column="1"/>
+        <Label Name ="lbl_content_type" Content="" HorizontalAlignment="Left" Margin="224,68,0,0" VerticalAlignment="Top" Width="150" FontWeight="Normal" Grid.Column="1"/>
     </Grid>
 </Window>

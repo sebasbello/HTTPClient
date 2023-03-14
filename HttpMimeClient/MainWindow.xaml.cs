@@ -27,7 +27,7 @@ namespace HttpMimeClient
         string content_type = "";
         Stream content_binary = null;
         string content_text = "";
-        //string extension = "";
+        string extension = "";
 
         public MainWindow()
         {
@@ -80,7 +80,7 @@ namespace HttpMimeClient
                     content_type = response.Content.Headers.ContentType.ToString();
                     this.lbl_content_type.Content = content_type;
 
-                    //extension = MimeTypeMap.GetExtension(content_type);
+                    extension = MimeTypeMap.GetExtension(content_type.Split(';')[0]);
                 }
                 catch (Exception exception)
                 {
