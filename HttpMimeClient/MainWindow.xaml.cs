@@ -19,6 +19,7 @@ using System.Net.Mime;
 using System.IO;
 using Microsoft.Web.WebView2.Wpf;
 using MimeTypes;
+using Microsoft.Win32;
 
 namespace HttpMimeClient
 {
@@ -34,7 +35,7 @@ namespace HttpMimeClient
             InitializeComponent();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(txt_url.Text))
             {
@@ -94,7 +95,7 @@ namespace HttpMimeClient
             }
         }
 
-        private void raw_radioButtonChecked(object sender, RoutedEventArgs e)
+        private void RawRadioButton_Check(object sender, RoutedEventArgs e)
         {
             TextBlock txt_block = new TextBlock();
             txt_block.TextWrapping = TextWrapping.Wrap;
@@ -105,7 +106,7 @@ namespace HttpMimeClient
             this.sview_body.Content = txt_block;
         }
 
-        private void pretty_radioButtonChecked(object sender, RoutedEventArgs e)
+        private void PrettyRadioButton_Check(object sender, RoutedEventArgs e)
         {
             if (content_type.StartsWith("text/html"))
             {
@@ -139,6 +140,24 @@ namespace HttpMimeClient
             image.StreamSource = strem;
             image.EndInit();
             return image;
+        }
+
+        private void DownloadButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog()
+            {
+                Title = "",
+                Filter = "Text Document (*.txt) | *.txt",
+                FileName = ""
+            };
+
+            if (saveFileDialog.ShowDialog().Equals(true))
+            {
+                StreamWriter streamWriter = new StreamWriter(File.Create(saveFileDialog.FileName));
+                streamWriter.Write(content_text);
+                streamWriter.Dispose();
+            }
+            
         }
     }
 }
