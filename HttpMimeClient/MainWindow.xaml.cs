@@ -115,7 +115,30 @@ namespace HttpMimeClient
                 this.tab_body.IsEnabled = true;
                 this.sview_body.Content = null;
                 this.sview_body.Content = webView2;
+            } 
+            else if (content_type.StartsWith("image"))
+            {
+                content_binary.Position = 0;
+                Byte[] buffer = new byte[content_binary.Length];
+                content_binary.Read(buffer, 0, buffer.Length);
+
+                Image image = new Image();
+                image.Source = ConvertByteArrayToBitmapImage(buffer);
+                this.tab_body.IsEnabled = true;
+                this.sview_body.Content = null;
+                this.sview_body.Content = image;
             }
+        }
+
+        public BitmapImage ConvertByteArrayToBitmapImage(Byte[] bytes)
+        {
+            Stream strem = new MemoryStream(bytes);
+            strem.Seek(0, SeekOrigin.Begin);
+            var image = new BitmapImage();
+            image.BeginInit();
+            image.StreamSource = strem;
+            image.EndInit();
+            return image;
         }
     }
 }
