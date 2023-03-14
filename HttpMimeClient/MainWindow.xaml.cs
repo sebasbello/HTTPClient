@@ -17,13 +17,17 @@ using System.Windows.Shapes;
 using HttpMimeClient.Model;
 using System.Net.Mime;
 using System.IO;
+using Microsoft.Web.WebView2.Wpf;
+using MimeTypes;
 
 namespace HttpMimeClient
 {
     public partial class MainWindow : Window
     {
-
-        string txt_body = "";
+        string content_type = "";
+        Stream content_binary = null;
+        string content_text = "";
+        //string extension = "";
 
         public MainWindow()
         {
@@ -34,11 +38,13 @@ namespace HttpMimeClient
         {
             if (!string.IsNullOrEmpty(txt_url.Text))
             {
+                this.raw_radioButton.IsChecked = false;
+                this.pretty_radioButton.IsChecked = false;
+                this.tab_control.SelectedIndex = 0;
+                this.tab_body.IsEnabled = false;
                 this.bdr_indicator.BorderBrush = null;
                 this.txt_headers.Text = "";
                 this.lbl_statuscode.Content = "";
-                string content_type = "";
-                Stream content_binary = null;
 
                 try
                 {
@@ -69,9 +75,12 @@ namespace HttpMimeClient
                     this.txt_headers.Text += "\r\n";
                     this.txt_headers.Text += "****** Entity: ******\r\n\r\n";
                     this.txt_headers.Text += response.Content.Headers.ToString();
-                    txt_body = await response.Content.ReadAsStringAsync();
+                    content_text = await response.Content.ReadAsStringAsync();
                     content_binary = await response.Content.ReadAsStreamAsync();
                     content_type = response.Content.Headers.ContentType.ToString();
+                    this.lbl_content_type.Content = content_type;
+
+                    //extension = MimeTypeMap.GetExtension(content_type);
                 }
                 catch (Exception exception)
                 {
@@ -89,10 +98,24 @@ namespace HttpMimeClient
         {
             TextBlock txt_block = new TextBlock();
             txt_block.TextWrapping = TextWrapping.Wrap;
-            txt_block.Text = txt_body;
+            txt_block.Text = content_text;
 
-            this.body.IsEnabled = true;
-            this.body.Content = txt_block;
+            this.tab_body.IsEnabled = true;
+            this.sview_body.Content = null;
+            this.sview_body.Content = txt_block;
+        }
+
+        private void pretty_radioButtonChecked(object sender, RoutedEventArgs e)
+        {
+            if (content_type.StartsWith("text/html"))
+            {
+                WebView2 webView2 = new WebView2();
+                webView2.Source = new Uri(txt_url.Text);
+
+                this.tab_body.IsEnabled = true;
+                this.sview_body.Content = null;
+                this.sview_body.Content = webView2;
+            }
         }
     }
 }
