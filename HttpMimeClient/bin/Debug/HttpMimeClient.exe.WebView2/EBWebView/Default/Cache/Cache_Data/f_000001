@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Preload -->
+    <link rel="preload" href="/v2/js/global.js" as="script">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="universidad veracruzana, docencia, licenciatura, posgrado, investigacion, estudiantes, academicos, vinculacion, biblioteca, publicaciones, alumnos, humanidades, orquesta, deportes" />
+    <meta name="description" content="Universidad Veracruzana, Instituci&oacute;n de educaci&oacute;n superior p&uacute;blica con distintas sedes a lo largo del estado de Veracruz" />
+	<meta name="author" content="buzonuv@uv.mx" />
+	<meta name="theme-color" content="#17529E">
+
+	<!-- Shortcut icon -->
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+	<!-- Google Font -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	
+	<title>Facultad de Estadística e Informática</title>
+<meta name='robots' content='max-image-preview:large' />
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip:auto!important;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}figure{margin:0 0 1em}
+</style>
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://www.uv.mx/fei/wp-includes/css/classic-themes.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='facultades-uv-style-css' href='https://www.uv.mx/fei/wp-content/themes/facultadesv2/style.css?ver=6.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='//www.uv.mx/v2/libs/bootstrap/4.5/css/bootstrap.min.css?ver=4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css' href='//www.uv.mx/v2/libs/fontawesome/5.3.1/css/all.css?ver=5.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='slickcarousel-css' href='//www.uv.mx/v2/libs/slick-carousel/1.9.0/slick.css?ver=1.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css' href='//www.uv.mx/v2/libs/fancybox/jquery.fancybox.min.css?ver=3.5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='globaluv-css' href='//www.uv.mx/v2/css/global.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.uv.mx/fei/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.uv.mx/fei/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/js/global.js' id='globaluv-js'></script>
+<link rel="https://api.w.org/" href="https://www.uv.mx/fei/wp-json/" /></head>
+
+<body class="home blog wp-embed-responsive wpv2 customize-1469">
+	<div id="toTop" class="ancla"><i class="fas fa-chevron-up"></i></div>
+    <div id="toDown" class="ancla"><i class="fas fa-chevron-down"></i></div>
+	<input type="hidden" id="home_url" value="https://www.uv.mx/fei/">
+	<section class="menu-flotante"></section>
+	<script> 
+		$(function(){
+			$(".menu-flotante").load("/v2/menu/menu-flotante.html?v=060520", function() {
+                ToTop();
+            });
+		});
+	</script>
+	<!-- /.sticky-top -->
+<section class="menu-principal sticky-top">
+
+    
+<!-- / .navbar-logo .navbar navbar-light navbar-expand-lg -->
+<nav class="navbar-logo navbar navbar-light navbar-expand">
+    <a class="navbar-brand d-inline-block text-truncate" style="max-width: 95%;" href="https://www.uv.mx/fei/" title="Facultad de Estadística e Informática" rel="home">
+        <span class="region-sitio small">Región Xalapa</span>
+        <span class="titulo-sitio">Facultad de Estadística e Informática</span>
+    </a>
+
+    <!-- /.collapse navbar-collapse-->
+    <div class="menu-logo-fijo collapse navbar-collapse">
+        <div class="collapse navbar-collapse">
+            <div class="navbar-nav pt-2 ml-auto">
+                <div class="nav-item dropdown">
+                    <a class="nav-link pr-0" href="#" id="navbarDropdownSearch" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="/V2/images/lupa.png" class="d-inline-block align-bottom" alt="" />
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-search" aria-labelledby="navbarDropdownSearch">
+                        <div class="dropdown-item">
+                            <!--
+                            <form role="search" method="get" class="search-form" action="">
+                                <div class="input-group input-group-sm">
+                                    <input value="" name="s" type="search" class="form-control" placeholder="Buscar..."
+                                        aria-label="Buscar" aria-describedby="busqueda">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-light btn-ir" type="submit">Ir</button>
+                                    </div>
+                                </div>
+                            </form>
+                            -->
+                            <gcse:searchbox-only resultsUrl="//www.uv.mx/fei/"  queryParameterName="s"  sort_by="date" enableOrderBy="true" enableAutoComplete="false"></gcse:searchbox-only>                        </div>
+                    </div>
+                </div>
+                <a class="nav-item nav-link" href="/prensa/" target="_blank">
+                    <img src="/v2/images/prensauv.png" class="d-inline-block" alt="" />
+                </a>
+                <a class="nav-item nav-link" href="/television/">
+                    <img src="/V2/images/teleuv.png" class="d-inline-block" alt="" />
+                </a>
+                <a class="nav-item nav-link" href="/radio/">
+                    <img src="/V2/images/radiouv.png" class="d-inline-block" alt="" />
+                </a>
+                <a class="nav-item nav-link" href="http://www.facebook.com/ComunicacionUV">
+                    <img src="/V2/images/fb.png" class="d-inline-block" alt="" />
+                </a>
+                <a class="nav-item nav-link" href="https://twitter.com/ComunicacionUV">
+                    <img src="/V2/images/tw.png" class="d-inline-block" alt="" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.collapse navbar-collapse-->
+</nav>
+<!-- / .navbar-logo .navbar navbar-light navbar-expand-lg -->
+    <a class="wphome small text-white pl-3 d-block d-lg-none text-truncate azul" href="/" title="Facultad de Estadística e Informática" rel="home">
+        Universidad Veracruzana
+    </a>
+
+    <!-- / navbar-top navbar navbar-light navbar-expand-lg -->
+    <nav class="navbar-top navbar navbar-light navbar-expand-lg">
+        <a class="navbar-brand d-block d-lg-none text-truncate" style="max-width: 95%;" href="https://www.uv.mx/fei/" title="Facultad de Estadística e Informática" rel="home">
+            <span class="region-sitio small">Región Xalapa</span>
+            <span class="titulo-sitio">Facultad de Estadística e Informática</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- / .collapse navbar-collapse-->
+        <div class="collapse navbar-collapse" id="navbarTop">
+
+            <!-- / .navbar-nav -->
+            <div class="navbar-nav">
+                <li class="nav-item"><a class="nav-link  active" href="https://www.uv.mx/fei">Inicio</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13506" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-13506 nav-item"><a title="Nosotros" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-13506">Nosotros</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-13506" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15706" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-15706 nav-item"><a title="Infraestructura (Instalaciones )" href="https://www.uv.mx/fei/general/infraestructura-instalaciones/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Infraestructura (Instalaciones )</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13591" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-13591 nav-item"><a title="Cuerpo Directivo" href="https://www.uv.mx/fei/general/cuerpo-directivo/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Cuerpo Directivo</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13508 nav-item"><a title="Directorio telefónico" href="https://www.uv.mx/fei/directorio-telefonico/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Directorio telefónico</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13514 nav-item"><a title="Historia" href="https://www.uv.mx/fei/historia/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Historia</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13515" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-13515 nav-item"><a title="Misión y Visión FEI al 2021" href="https://www.uv.mx/fei/general/mision-fei/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Misión y Visión FEI al 2021</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13519" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-13519 nav-item"><a title="Organigrama" href="https://www.uv.mx/fei/comite-de-calidad/organigrama/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Organigrama</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13527" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-13527 nav-item"><a title="Normatividad" href="https://www.uv.mx/fei/general/normatividad/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Normatividad</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16485" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-16485 nav-item"><a title="Varios" href="https://www.uv.mx/fei/documentos/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> PLADEAS &#8211; Informes de labores &#8211; Planes de Trabajo</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-12754" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-12754 nav-item"><a title="Programas Educativos" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-12754">Programas Educativos</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-12754" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-19817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19817 nav-item"><a title="Licenciaturas" href="https://www.uv.mx/fei/licenciaturas/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Licenciaturas</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15715 nav-item"><a title="Acreditaciones" href="https://www.uv.mx/fei/acreditaciones/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Acreditaciones</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-12758" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-12758 nav-item"><a title="Posgrados" href="https://www.uv.mx/fei/etiqueta/posgrado/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Posgrados</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-5351" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-5351 nav-item"><a title="Aspirantes" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-5351">Aspirantes</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-5351" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11928 nav-item"><a title="Convocatoria Licenciatura 2023" href="https://www.uv.mx/escolar/licenciatura2023/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Convocatoria Licenciatura 2023</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15708" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15708 nav-item"><a title="Expo Orienta" href="https://www.uv.mx/expoorienta/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Expo Orienta</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11943" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-11943 nav-item"><a title="Preguntas Frecuentes" href="https://www.uv.mx/fei/convocatorias/preguntas-frecuentes-fei/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Preguntas Frecuentes</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15687 nav-item"><a title="Modelo Educativo - MEIF" href="https://www.uv.mx/estudiantes/modelo-educativo-institucional/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Modelo Educativo &#8211; MEIF</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11641" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-11641 nav-item"><a title="Estudiantes" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-11641">Estudiantes</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-11641" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15735" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15735 nav-item"><a title="Conoce tu Universidad" href="https://www.uv.mx/fei/conoce-tu-universidad-2022/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Conoce tu Universidad</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15742" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-15742 nav-item"><a title="Servicios de Salud" href="https://www.uv.mx/fei/general/servicios-de-salud/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Servicios de Salud</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15703" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-15703 nav-item"><a title="Becas" href="https://www.uv.mx/fei/general/becas/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Becas</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13531" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13531 nav-item"><a title="Movilidad" href="https://www.uv.mx/movilidad/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Movilidad</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13532" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13532 nav-item"><a title="Calendarios" href="https://www.uv.mx/estudiantes/calendarios-escolares/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Calendarios</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11644" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-11644 nav-item"><a title="Trámites" href="https://www.uv.mx/fei/tramites/tramites/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Trámites</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11648" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-11648 nav-item"><a title="Tutorías" href="https://www.uv.mx/fei/tutorias-2/tutorias-2/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Tutorías</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11651" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-11651 nav-item"><a title="Prácticas" href="https://www.uv.mx/fei/practicas/practicas/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Prácticas</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11655" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-11655 nav-item"><a title="SS y ER" href="https://www.uv.mx/fei/estudiantes/ss-y-er/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> SS y ER</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-18547" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-18547 nav-item"><a title="Equidad de Género" href="https://www.uv.mx/fei/general/equidad-de-genero/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Equidad de Género</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-19540" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19540 nav-item"><a title="Consejo Estudiantil" href="https://www.uv.mx/fei/general/consejo-estudiantil/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Consejo Estudiantil</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-19508" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19508 nav-item"><a title="Oferta Educativa Periodo febrero – julio 2023" href="https://www.uv.mx/fei/general/oferta-educativa-periodo-febrero-julio-2023/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Oferta Educativa Periodo febrero – julio 2023</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13535" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-13535 nav-item"><a title="Académicos" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-13535">Académicos</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-13535" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13544" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-13544 nav-item"><a title="Personal Académico por Licenciatura" href="https://www.uv.mx/fei/general/personal-academico-por-licenciatura/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Personal Académico por Licenciatura</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-12651" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-12651 nav-item"><a title="Convocatorias – Avisos – Resultados" href="https://www.uv.mx/fei/general/convocatorias/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Convocatorias – Avisos – Resultados</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-18915" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-18915 nav-item"><a title="PEDPA" href="https://www.uv.mx/fei/general/pedpa/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> PEDPA</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-12653" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-12653 nav-item"><a title="Cuerpos Académicos" href="https://www.uv.mx/fei/cuerpos-colegiados/cuerpos-academicos/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Cuerpos Académicos</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13538" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-13538 nav-item"><a title="Consejo Técnico" href="https://www.uv.mx/fei/cuerpos-colegiados/consejo-tecnico/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Consejo Técnico</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13546" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13546 nav-item"><a title="EMINUS" href="https://eminus.uv.mx/eminus4/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> EMINUS</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-18930" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-18930 nav-item"><a title="Coordinaciones" href="https://www.uv.mx/fei/general/coordinaciones/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Coordinaciones</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15770" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-15770 nav-item"><a title="Tutorías" href="https://www.uv.mx/fei/tutorias-2/tutorias-2/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Tutorías</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17932" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-17932 nav-item"><a title="Academias" href="https://www.uv.mx/fei/cuerpos-colegiados/academias/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Academias</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-18546" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-18546 nav-item"><a title="Equidad de Género" href="https://www.uv.mx/fei/general/equidad-de-genero/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Equidad de Género</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13539 nav-item"><a title="Comité Pro-Mejoras" href="https://www.uv.mx/fei/comite-pro-mejoras/" class="nav-link">Comité Pro-Mejoras</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17530" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17530 nav-item"><a title="Retorno Responsable" href="https://www.uv.mx/fei/retornoresponsable/" class="nav-link">Retorno Responsable</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-17076 nav-item"><a title="Transparencia" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-17076">Transparencia</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-17076" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17079" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-17079 nav-item"><a title="Actas de Consejo Técnico y Juntas Académicas" href="https://www.uv.mx/fei/general/documentos-actas/" class="dropdown-item"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Actas de Consejo Técnico y Juntas Académicas</a></li>
+</ul>
+</li>
+            </div>
+            <!-- / .navbar-nav -->
+
+            <div class="menu-principal-menu-inferior bg-light container-fluid d-md-block d-lg-none busqueda-sm pt-3 pb-2">
+                <div class="row">
+                    <div class="col-12">
+                        <gcse:searchbox-only resultsUrl="//www.uv.mx/fei/"  queryParameterName="s"  sort_by="date" enableOrderBy="true" enableAutoComplete="false"></gcse:searchbox-only>                    </div>
+                    <div class="col-12 text-center">
+                        <a class="ml-0 pl-0" href="/prensa/" target="_blank">
+                            <img src="/v2/images/prensauv.png" class="d-inline-block align-bottom" alt="" />
+                        </a>
+                        <a class="ml-2" href="/television/" target="_blank">
+                            <img src="/v2/images/teleuv.png" class="d-inline-block align-bottom" alt="" />
+                        </a>
+                        <a class="ml-2" href="#">
+                            <img src="/V2/images/radiouv.png" class="d-inline-block align-bottom" alt="" />
+                        </a>
+                        <a class="ml-2 text-center" href="#">
+                            <img src="/V2/images/fb.png" class="d-inline-block align-bottom" alt="" />
+                        </a>
+                        <a class="ml-2 text-center" href="#">
+                            <img src="/V2/images/tw.png" class="d-inline-block align-bottom" alt="" />
+                        </a>
+                                                                                                                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.collapse navbar-collapse-->
+    </nav>
+    <!-- / navbar-top navbar navbar-light navbar-expand-lg -->
+</section>
+<!-- /.sticky-top -->	
+<section class="menu-idioma azul">
+    <!-- Comienza el menu de Idioma -->
+    <nav class="navbar-idioma navbar navbar-light navbar-expand">
+        <a class="navbar-brand d-none" href="/" title="Universidad Veracruzana">
+            Universidad Veracruzana
+        </a>
+        <div class="collapse navbar-collapse" id="navbarIdioma">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="https://dsia.uv.mx/miuv/escritorio/login.aspx" target="_blank">Mi UV</a>
+                <a class="nav-item nav-link" href="http://mailweb.uv.mx/" target="_blank">Correo</a>
+                <a class="nav-item nav-link" href="/estudiantes/">Estudiantes</a>
+                <a class="nav-item nav-link" href="/egresados/">Egresados</a>
+                <a class="nav-item nav-link" href="/academicos/">Académicos</a>
+                <a class="nav-item nav-link" href="/administrativos/">Administrativos</a>
+                <a class="nav-item nav-link" href="/comunicate/">Directorio</a>
+                                                                            </div>
+        </div>
+    </nav>
+    <!-- Termina el menu de Idioma -->
+</section>	
+
+
+<!-- Banner de avisos -->
+<div class='box-noticias mb-2' data-max="20" data-tiempo="7000" >
+    <div class='box-content'>
+        <section class="noticias-slider cargando" data-max="20" data-tiempo="7000">
+            	
+                <div class="item image">
+                    <figure>
+                        <div class="slide-image slide-media" data-src="" data-src-mobile=""></div>
+                        <div class="card-img-overlay d-md-flex text-white">
+                            <div class="caption-container w-100 align-self-end mb-5">
+                                <figcaption class="caption text-truncate"></figcaption>
+                                <figcaption class="subcaption text-truncate"></figcaption>
+                                <a href="" class="btn btn-primary btn-sm mt-3 px-4 d-none" role="button">Leer más</a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                    </section>
+    </div>
+</div>
+<!-- Banner de avisos -->
+
+
+<!-- Cintillo -->
+<section class="cintillo container-fluid">
+	<div class="row">
+		<div class="col col-12 col-sm-6 col-md-6 col-lg-3 template"></div>
+		<div class="col col-12 col-sm-6 col-md-6 col-lg-3 template"></div>
+		<div class="col col-12 col-sm-6 col-md-6 col-lg-3 template"></div>
+		<div class="col col-12 col-sm-6 col-md-6 col-lg-3 template"></div>
+	</div>
+</section>
+<!-- Cintillo -->
+
+    
+
+
+
+<section class="AreaImagenes container-fluid my-4 px-4 reveal azulverde">
+        <div class="container py-5">
+                                
+                                        <h2 class="h2 text-center mb-5"> AVISOS</h2>
+                
+                <div class="row">        
+
+                        
+                                         
+                                                <section class="mx-auto col-md-3 col-sm-6 imagen-1">
+                                                        <div class="wp-caption text-center">
+                                                
+                                                                 
+                                                                                <a href="https://www.uv.mx/fei/general/avisos/"   >
+                                                                                        <img src="https://www.uv.mx/fei/files/2012/11/avisos-fei-.png" class="img-fluid  my-3 float-none" alt="Imagen">
+                                                                                </a>        
+                                                                        
+                                                                
+                                                                                                                                
+                                                        
+                                                        </div>   
+                                                </section>
+                                                                                
+                        
+                                                                                
+                        
+                                                                                
+                        
+                                         
+                                                <section class="mx-auto col-md-3 col-sm-6 imagen-2">
+                                                        <div class="wp-caption text-center">
+                                                
+                                                                 
+                                                                                <a href="https://www.uv.mx/fei/general/video-y-presentacion-bienvenida-a-nuevo-ingreso/"   >
+                                                                                        <img src="https://www.uv.mx/fei/files/2020/09/img-Bv2.jpeg" class="img-fluid  my-3 float-none" alt="Imagen">
+                                                                                </a>        
+                                                                        
+                                                                                                                                        <h5 >Recursos Bienvenida </h5>
+                                                                
+                                                                                                                                        <p>Nuevo Ingreso FEI</p>
+                                                                                                                                
+                                                        
+                                                        </div>   
+                                                </section>
+                                                                                
+                        
+                                         
+                                                <section class="mx-auto col-md-3 col-sm-6 imagen-3">
+                                                        <div class="wp-caption text-center">
+                                                
+                                                                 
+                                                                                <a href="https://www.uv.mx/fei/general/informacion-de-inscripciones-periodo-febrero-julio-2023/"   >
+                                                                                        <img src="https://www.uv.mx/fei/files/2023/01/insc-feb_jul23.png" class="img-fluid  my-3 float-none" alt="Imagen">
+                                                                                </a>        
+                                                                        
+                                                                                                                                        <h5 >INFORMACIÓN DE INSCRIPCIONES </h5>
+                                                                
+                                                                                                                                        <p>PERIODO FEBRERO-JULIO 2023</p>
+                                                                                                                                
+                                                        
+                                                        </div>   
+                                                </section>
+                                                                                
+                                                        
+           
+
+                </div>                                
+
+        </div>
+
+</section>  
+
+
+	<section  class="mediaiframe bg-transparent jumbotron jumbotron-fluid my-4 px-4">
+
+	<div class="container">
+		<div class="row">
+		
+						<div class="uno col-12 mx-auto mb-2">
+					
+											<h2 class="informacion-title text-center">Conoce más de las Licenciaturas FEI</h2>
+											<p class="media-info mt-3 font-weight-light text-center">Video promocional de las Licenciaturas que se ofertan el la Facultad de Estadística e Informática.</p>
+						
+				</div>
+
+										<div class="dos col-sm-12 col-md-6 col-lg-7 mx-auto mt-2">
+					
+					
+					<div class="iframe-media"> 
+																							<div class="shadow p-2 mb-5  embed-responsive embed-responsive-16by9">
+										
+										<iframe src="https://lumen.uv.mx/lumen/shared/embed/resource/2478" scrolling="no" allowfullscreen></iframe>
+								</div>
+													
+						</div>								
+
+					 
+							<p class="mediaiframe-url text-center">
+								<a href="https://lumen.uv.mx/lumen/shared/embed/resource/2478" class="btn btn-primary px-5"   role="button">Ver más</a>
+							</p>
+									</div>
+
+		</div><!-- .home-section-inner -->
+
+	</div><!-- .container -->
+</section>
+
+
+	<section  class="postmenu  bg-transparent jumbotron jumbotron-fluid my-4 px-4">
+
+	<div class="container">
+		<div class="row">
+		
+		
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 order-1">
+
+									<h3 class="mb-3 p-2  title">Programas de Estudios</h3>
+				<div class="row posts"> <div class="col-6 col-sm-6 col-md-6"><a href="https://www.uv.mx/fei/plan-de-estudios/lic-en-ingenieria-de-software/"><img width="146" height="112" src="https://www.uv.mx/fei/files/2023/01/LIS-150x112-1.jpg" class="card-img-top img-fluid lazy wp-post-image" alt="" decoding="async" loading="lazy" /></a><h5><a href="https://www.uv.mx/fei/plan-de-estudios/lic-en-ingenieria-de-software/">Lic. en Ingeniería de Software</a></h5><p class="text-secondary font-weight-light">PROGRAMA ACTUALIZADO &#8211; PLAN DE ESTUDIOS 2023</p>
+
+				</div> <div class="col-6 col-sm-6 col-md-6"><a href="https://www.uv.mx/fei/plan-de-estudios/lic-en-ingenieria-de-ciberseguridad-e-infraestructura-de-computo/"><img width="150" height="109" src="https://www.uv.mx/fei/files/2023/01/LICIC2-150x112-1.png" class="card-img-top img-fluid lazy wp-post-image" alt="" decoding="async" loading="lazy" /></a><h5><a href="https://www.uv.mx/fei/plan-de-estudios/lic-en-ingenieria-de-ciberseguridad-e-infraestructura-de-computo/">Lic. en Ingeniería de Ciberseguridad e Infraestructura de Cómputo</a></h5><p class="text-secondary font-weight-light">NUEVO &#8211; PLAN DE ESTUDIOS 2023</p>
+
+				</div> <div class="col-6 col-sm-6 col-md-6"><a href="https://www.uv.mx/fei/plan-de-estudios/lic-en-ingenieria-en-sistemas-y-tecnologias-de-la-informacion/"><img width="150" height="112" src="https://www.uv.mx/fei/files/2023/01/LISTI2-150x112-1.png" class="card-img-top img-fluid lazy wp-post-image" alt="" decoding="async" loading="lazy" /></a><h5><a href="https://www.uv.mx/fei/plan-de-estudios/lic-en-ingenieria-en-sistemas-y-tecnologias-de-la-informacion/">Lic. en Ingeniería en Sistemas y Tecnologías de la Información</a></h5><p class="text-secondary font-weight-light">NUEVO &#8211; PLAN DE ESTUDIOS 2023</p>
+
+				</div> <div class="col-6 col-sm-6 col-md-6"><a href="https://www.uv.mx/fei/plan-de-estudios/estadistica/"><img width="150" height="113" src="https://www.uv.mx/fei/files/2017/09/LE.jpeg" class="card-img-top img-fluid lazy wp-post-image" alt="" decoding="async" loading="lazy" /></a><h5><a href="https://www.uv.mx/fei/plan-de-estudios/estadistica/">Lic.Estadística</a></h5><p class="text-secondary font-weight-light"></p>
+
+				</div> <div class="col-6 col-sm-6 col-md-6"><a href="https://www.uv.mx/fei/plan-de-estudios/lic-en-redes-y-servicios-de-computo/"><img width="150" height="112" src="https://www.uv.mx/fei/files/2014/01/REDES.jpeg" class="card-img-top img-fluid lazy wp-post-image" alt="" decoding="async" loading="lazy" /></a><h5><a href="https://www.uv.mx/fei/plan-de-estudios/lic-en-redes-y-servicios-de-computo/">Lic. en Redes y Servicios de Cómputo</a></h5><p class="text-secondary font-weight-light">&nbsp;</p>
+
+				</div> <div class="col-6 col-sm-6 col-md-6"><a href="https://www.uv.mx/fei/plan-de-estudios/lic-tecnologias-computacionales/"><img width="150" height="112" src="https://www.uv.mx/fei/files/2014/01/LTC.png" class="card-img-top img-fluid lazy wp-post-image" alt="" decoding="async" loading="lazy" /></a><h5><a href="https://www.uv.mx/fei/plan-de-estudios/lic-tecnologias-computacionales/">Lic. en Tecnologías Computacionales</a></h5><p class="text-secondary font-weight-light"></p>
+
+				</div></div>
+			</div>
+							<div class="col-sm-12 col-md-4 col-lg-4 order-2 bg-light">
+									<h3 class="mb-3 p-2 subtitle">DIVERSOS</h3>
+				
+				
+					<div class="list-group list-group-flush"><ul id="menu-3opciones" class="menu"><li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="https://www.uv.mx/fei/documentos/">Documentos</a></li>
+<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443"><a href="https://www.uv.mx/fei/multimedia/">Multimedia</a></li>
+<li id="menu-item-444" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-444"><a href="https://www.uv.mx/fei/premios-y-reconocimiento/">Premios y Reconocimiento</a></li>
+<li id="menu-item-12732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12732"><a href="https://www.uv.mx/fei/seccion/avisoprivacidad/">Aviso de privacidad</a></li>
+<li id="menu-item-12750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12750"><a href="https://www.uv.mx/fei/oportunidades-de-empleo/">Oportunidades de Empleo</a></li>
+<li id="menu-item-12751" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12751"><a href="https://www.uv.mx/fei/seccion/opinionesysugerencias/">Opiniones y Sugerencias</a></li>
+<li id="menu-item-18575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18575"><a href="https://www.uv.mx/fei/material-de-ponencias/">Material de ponencias</a></li>
+</ul></div>				
+				</div>
+
+					</div><!-- .home-section-inner -->
+
+	</div><!-- .container -->
+</section>
+
+
+	    <footer class="otrossitios container-fluid mt-5 pb-1 azul">
+        <div class="container py-2">
+            <div class="row mt-3">
+                <div class="ubicacion col-xs-12 col-sm-12 col-md-12 col-lg-4 text-md-left">
+                    <h4 class="text-white mb-3 pl-3">Ubicación</h4>
+                    <div class="row text-white pt-3 ml-3 border-2 border-white">
+                        <div class="col-2 col-md-1 col-lg-2 text-right">
+                            <p><i class="fas fa-map-marker-alt"></i></p>
+                        </div>
+                        <div class="col-10 col-md-11 col-lg-10">
+                            <p>
+                                Universidad Veracruzana - Facultad de Economía, Geografía y Estadística<br />Av. Xalapa s/n<br />Obrero Campesina<br />91020 Xalapa-Enríquez, Ver.<br />México                            </p>
+                        </div>
+                        <div class="col-2 col-md-1 col-lg-2 text-right">
+                            <p><i class="fas fa-phone"></i></p>
+                        </div>
+                        <div class="col-10 col-md-11 col-lg-10">
+                            <p>
+                                <a href="tel:228 8421700         Ext. 14155, 14108" class="ubicacion-telefono text-white">228 8421700         Ext. 14155, 14108</a>                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-0 ml-1">
+                        <ul class="list-inline">
+                                                            <a class="fb_url list-inline-item mr-n3" href="https://www.facebook.com/FEIUV" target="_blank">
+                                    <img src="/V2/images/fb-white.png" class="d-inline-block align-bottom" alt="" />
+                                </a>
+                                                                                    <a class="tw_url list-inline-item mr-n2" href="https://twitter.com/fei_uv" target="_blank">
+                                <img src="/V2/images/tw-white.png" class="d-inline-block align-bottom" alt="" />
+                            </a>
+                                                                                                                                                                    </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 mt-2 mt-lg-0">
+                    <a href="https://www.uv.mx/transparencia/"><h4 class="text-white text-center mb-3 pl-4">Transparencia</h4></a>
+                    <div class="row text-white justify-content-center">
+                        <div class="col-3 text-center">
+                            <a class="text-white" href="https://www.plataformadetransparencia.org.mx/" target="_blank">
+                                <img src="/V2/images/logotransparencia.png" class="d-inline-block align-bottom" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a class="text-white d-block mt-2" href="/informacionpublica/" target="_blank">Información financiera presupuestal</a>
+                            <a class="text-white d-block mt-2" href="/transparencia/gobierno-abierto/inicio/" target="_blank">Gobierno Abierto</a>
+                            <a class="text-white d-block mt-2" href="https://www.uv.mx/transparencia/infpublica/avisos-privacidad/" target="_blank">Avisos de Privacidad</a>
+                        </div>
+                    </div>
+                    <div class="row text-white">
+                        <div class="col mt-4 ml-4 border-top text-center">
+                            <a class="text-white d-block mt-2" href="https://innovarua.uv.mx/portal/" target="_blank">Red Universitaria de Aprendizaje (RUA)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 mt-5 mt-lg-0">
+                    <a href="https://www.uv.mx/legislacion/files/2017/07/Codigo-de-etica-de-la-Universidad-Veracruzana.pdf" target="_blank"><h4 class="text-white text-center mb-3 pl-3">Código de ética</h4></a>
+                    <h5 class="text-white pl-3 mt-4">Última actualización</h5>
+                    <div class="row text-white ml-0">
+                        <div class="col">
+                            <span class="d-block"><strong>Fecha:</strong> 14 marzo, 2023</span>
+                            <span class="d-block"><strong>Responsable:</strong> <span class="responsable-nombre">MRC. Angélica Pérez Hernández</span></span>
+                            <span class="d-block"><strong>Contacto:</strong> <span class="responsable-correo">angelperez@uv.mx - Solo asuntos de la página- NO trámites escolares ni administrativos</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="copy border-top mt-3 pt-2">
+                <div class="row">
+                    <div class="col-12 col-md-6 text-white">
+                        © <span class="footer-year"></span> Universidad Veracruzana. Todos los derechos reservados.
+                    </div>
+                    <div class="col-12 col-md-6 mt-5 mt-md-0 text-right">
+                        <a class=" text-white" href="/universidad/buzon-de-comentarios/">Buzón de comentarios</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </footer>
+	<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--azul: #0E47A1;--wp--preset--color--azul-intenso: #003466;--wp--preset--color--azul-cielo: #2196f3;--wp--preset--color--gris: #F7F7F7;--wp--preset--color--verde: #00695B;--wp--preset--color--verde-limon: #669933;--wp--preset--color--turquesa: #3DB1B1;--wp--preset--color--naranja: #ED6D2C;--wp--preset--color--rojo: #f32735;--wp--preset--color--violeta: #9B5095;--wp--preset--color--negro: #000000;--wp--preset--color--blanco: #FFFFFF;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<script type='text/javascript' src='//www.uv.mx/js/google-analytics.js' id='google-analytics-uv-js'></script>
+<script type='text/javascript' src='https://www.uv.mx/fei/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.4' id='swv-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.uv.mx\/fei\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.uv.mx/fei/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.4' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://www.uv.mx/fei/wp-content/themes/facultadesv2/js/slick-reciente.js?ver=1.0.0' id='facultades-uv-custom-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/libs/popper.js/1.14.4/umd/popper.min.js?ver=1.14.4' id='popper-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/libs/bootstrap/4.5/js/bootstrap.min.js?ver=4.5' id='bootstrap-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/libs/moment/2.22.2/moment-with-locales.js?ver=2.22.2' id='momentuv-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/libs/slick-carousel/1.9.0/slick.min.js?ver=1.9.0' id='slickcarousel-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/libs/detectmobilebrowser/detectmobilebrowser.js' id='detectmobilebrowser-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/libs/fancybox/jquery.fancybox.min.js?ver=3.5.7' id='fancybox-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/plugins/v2/temav2/resources/js/front-page.js?ver=1678939307' id='frontpagev2-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/plugins/v2/temav2/resources/js/global.js?ver=1678939307' id='globaluvwp-js'></script>
+<script type='text/javascript' src='//www.uv.mx/v2/plugins/v2/post_type_avisos/resources/js/front-page.js?ver=1678939307' id='avisosv2-js'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LdrzMgZAAAAAHd9Y3F05neumrVxXoTafTbA_7K2&#038;ver=3.0' id='google-recaptcha-js'></script>
+<script type='text/javascript' src='https://www.uv.mx/fei/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://www.uv.mx/fei/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6LdrzMgZAAAAAHd9Y3F05neumrVxXoTafTbA_7K2","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.uv.mx/fei/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.7.4' id='wpcf7-recaptcha-js'></script>
+</body>
+</html>

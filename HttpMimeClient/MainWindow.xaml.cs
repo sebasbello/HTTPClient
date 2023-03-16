@@ -20,6 +20,7 @@ using System.IO;
 using Microsoft.Web.WebView2.Wpf;
 using MimeTypes;
 using Microsoft.Win32;
+using HeyRed.Mime;
 
 namespace HttpMimeClient
 {
@@ -27,8 +28,9 @@ namespace HttpMimeClient
     {
         string content_type = "";
         Stream content_binary = null;
+        Image image = null;
         string content_text = "";
-        string extension = "";
+        string mimeExtension = "";
 
         public MainWindow()
         {
@@ -80,8 +82,13 @@ namespace HttpMimeClient
                     content_binary = await response.Content.ReadAsStreamAsync();
                     content_type = response.Content.Headers.ContentType.ToString();
                     this.lbl_content_type.Content = content_type;
+                    mimeExtension = "*." + MimeTypesMap.GetExtension(content_type);
+                    content_binary.Position = 0;
+                    Byte[] buffer = new byte[content_binary.Length];
+                    content_binary.Read(buffer, 0, buffer.Length);
 
-                    extension = MimeTypeMap.GetExtension(content_type.Split(';')[0]);
+                    image = new Image();
+                    image.Source = ConvertByteArrayToBitmapImage(buffer);
                 }
                 catch (Exception exception)
                 {
@@ -116,15 +123,9 @@ namespace HttpMimeClient
                 this.tab_body.IsEnabled = true;
                 this.sview_body.Content = null;
                 this.sview_body.Content = webView2;
-            } 
+            }
             else if (content_type.StartsWith("image"))
             {
-                content_binary.Position = 0;
-                Byte[] buffer = new byte[content_binary.Length];
-                content_binary.Read(buffer, 0, buffer.Length);
-
-                Image image = new Image();
-                image.Source = ConvertByteArrayToBitmapImage(buffer);
                 this.tab_body.IsEnabled = true;
                 this.sview_body.Content = null;
                 this.sview_body.Content = image;
@@ -142,22 +143,47 @@ namespace HttpMimeClient
             return image;
         }
 
+        public void Save(SaveFileDialog saveFileDialog)
+        {
+            string fileName = saveFileDialog.FileName;
+            if (fileName != null)
+            {
+                if (content_type.StartsWith("text/html"))
+                {
+                    StreamWriter streamWriter = new StreamWriter(File.Create(saveFileDialog.FileName));
+                    streamWriter.Write(content_text);
+                    streamWriter.Dispose();
+                }
+                else if (content_type.StartsWith("image"))
+                {
+                    var pngBitmapEncoder = new PngBitmapEncoder();
+                    pngBitmapEncoder.Frames.Add(BitmapFrame.Create((BitmapSource)image.Source));
+                    using (FileStream stream = new FileStream(fileName, FileMode.Create))
+                    {
+                        pngBitmapEncoder.Save(stream);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("File extension not expected. Please, try again.", "Warning",
+                        MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+        }
+
         private void DownloadButton_Click(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog()
+            SaveFileDialog saveFileDialog = new SaveFileDialog
             {
-                Title = "",
-                Filter = "Text Document (*.txt) | *.txt",
-                FileName = ""
+                Title = "Save",
+                Filter = (content_type.StartsWith("text/html")) ? "(*.html)|*.html" : "(" + mimeExtension + ")|" + mimeExtension,
+                FilterIndex = 0
             };
-
-            if (saveFileDialog.ShowDialog().Equals(true))
+            saveFileDialog.ShowDialog();
+            if (saveFileDialog.FileName != null)
             {
-                StreamWriter streamWriter = new StreamWriter(File.Create(saveFileDialog.FileName));
-                streamWriter.Write(content_text);
-                streamWriter.Dispose();
+                Save(saveFileDialog);
             }
-            
         }
     }
 }

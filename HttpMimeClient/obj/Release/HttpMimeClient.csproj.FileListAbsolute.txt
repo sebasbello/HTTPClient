@@ -26,3 +26,4 @@ D:\sebtr\Code\C#\HttpClient\HttpMimeClient\bin\Release\Microsoft.Web.WebView2.Co
 D:\sebtr\Code\C#\HttpClient\HttpMimeClient\bin\Release\Microsoft.Web.WebView2.WinForms.xml
 D:\sebtr\Code\C#\HttpClient\HttpMimeClient\bin\Release\Microsoft.Web.WebView2.Wpf.xml
 D:\sebtr\Code\C#\HttpClient\HttpMimeClient\obj\Release\HttpMimeClient.csproj.CopyComplete
+D:\sebtr\Code\C#\HttpClient\HttpMimeClient\bin\Release\MimeTypesMap.dll
