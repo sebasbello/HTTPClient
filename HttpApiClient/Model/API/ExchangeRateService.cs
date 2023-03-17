@@ -27,6 +27,9 @@ namespace HttpApiClient.Model.API
                 HttpResponseMessage response;
                 try
                 {
+                    /*
+                     * Parameter "prettyprint" sets the json string format to plain text. 
+                     */
                     string url = string.Format("{0}latest.json?app_id={1}&prettyprint=false", BASE_URL, APP_ID);
                     request = new HttpRequestMessage(HttpMethod.Get, url);
                     response = await httpClient.SendAsync(request);
@@ -36,14 +39,10 @@ namespace HttpApiClient.Model.API
                         if (response.IsSuccessStatusCode)
                         {
                             ExchangeRate exchangeRate;
-                            //Stream jsonString = await response.Content.ReadAsStreamAsync();
                             String jsonstring = await response.Content.ReadAsStringAsync();
 
                             exchangeRate = JsonConvert.DeserializeObject<ExchangeRate>(jsonstring);
 
-
-                            //DataContractJsonSerializer deserializer = new DataContractJsonSerializer(typeof(ExchangeRate));
-                            //exchangeRate = (ExchangeRate)deserializer.ReadObject(jsonString);
 
                             if (exchangeRate != null && exchangeRate.Disclaimer != null && exchangeRate.Rates != null)
                             {
