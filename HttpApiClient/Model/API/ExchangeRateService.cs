@@ -1,4 +1,6 @@
 ﻿using HttpApiClient.Model.Object;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,7 +15,7 @@ namespace HttpApiClient.Model.API
 {
     public class ExchangeRateService
     {
-        private static readonly string BASE_URL = "https://openexechangerates.org/api/";
+        private static readonly string BASE_URL = "https://openexchangerates.org/api/";
         private static readonly string APP_ID = "e77f99c02f404d34a3631b67223d85e5";
 
         public static async Task<ServiceResponse> GetExchangeRateConversion()
@@ -25,7 +27,7 @@ namespace HttpApiClient.Model.API
                 HttpResponseMessage response;
                 try
                 {
-                    string url = string.Format("{0}latest.json?app_id={1}", BASE_URL, APP_ID);
+                    string url = string.Format("{0}latest.json?app_id={1}&prettyprint=false", BASE_URL, APP_ID);
                     request = new HttpRequestMessage(HttpMethod.Get, url);
                     response = await httpClient.SendAsync(request);
 
@@ -34,10 +36,14 @@ namespace HttpApiClient.Model.API
                         if (response.IsSuccessStatusCode)
                         {
                             ExchangeRate exchangeRate;
-                            Stream jsonString = await response.Content.ReadAsStreamAsync();
+                            //Stream jsonString = await response.Content.ReadAsStreamAsync();
+                            String jsonstring = await response.Content.ReadAsStringAsync();
 
-                            DataContractJsonSerializer deserializer = new DataContractJsonSerializer(typeof(ExchangeRate));
-                            exchangeRate = (ExchangeRate)deserializer.ReadObject(jsonString);
+                            exchangeRate = JsonConvert.DeserializeObject<ExchangeRate>(jsonstring);
+
+
+                            //DataContractJsonSerializer deserializer = new DataContractJsonSerializer(typeof(ExchangeRate));
+                            //exchangeRate = (ExchangeRate)deserializer.ReadObject(jsonString);
 
                             if (exchangeRate != null && exchangeRate.Disclaimer != null && exchangeRate.Rates != null)
                             {

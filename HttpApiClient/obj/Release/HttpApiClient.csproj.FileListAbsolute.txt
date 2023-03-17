@@ -14,3 +14,7 @@ D:\sebtr\Code\C#\HttpClient\HttpApiClient\obj\Release\HttpApiClient.csproj.Gener
 D:\sebtr\Code\C#\HttpClient\HttpApiClient\obj\Release\HttpApiClient.csproj.CoreCompileInputs.cache
 D:\sebtr\Code\C#\HttpClient\HttpApiClient\obj\Release\HttpApiClient.exe
 D:\sebtr\Code\C#\HttpClient\HttpApiClient\obj\Release\HttpApiClient.pdb
+D:\sebtr\Code\C#\HttpClient\HttpApiClient\bin\Release\JsonToEntityClass.dll
+D:\sebtr\Code\C#\HttpClient\HttpApiClient\bin\Release\Newtonsoft.Json.dll
+D:\sebtr\Code\C#\HttpClient\HttpApiClient\bin\Release\Newtonsoft.Json.xml
+D:\sebtr\Code\C#\HttpClient\HttpApiClient\obj\Release\HttpApiClient.csproj.CopyComplete

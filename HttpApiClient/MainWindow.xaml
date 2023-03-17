@@ -14,11 +14,11 @@
         <Label Content="Amount:" HorizontalAlignment="Left" Margin="41,90,0,0" VerticalAlignment="Top" Width="58" FontWeight="Bold"/>
         <TextBox x:Name="txt_amount" HorizontalAlignment="Left" Margin="158,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="23"/>
         <Label Content="Conversion:" HorizontalAlignment="Left" Margin="41,133,0,0" VerticalAlignment="Top" Width="92" FontWeight="Bold"/>
-        <TextBox x:Name="txt_conversion" HorizontalAlignment="Left" Margin="158,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="23"/>
+        <TextBox x:Name="txt_conversion" IsReadOnly="True" HorizontalAlignment="Left" Margin="158,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="23"/>
         <Label Content="Exchange rate:" HorizontalAlignment="Left" Margin="40,178,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold"/>
-        <TextBox x:Name="txt_exchange" HorizontalAlignment="Left" Margin="158,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="23"/>
+        <TextBox x:Name="txt_exchange" IsReadOnly="True" HorizontalAlignment="Left" Margin="158,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="23"/>
         <Label Content="Timezone (UTC):" HorizontalAlignment="Left" Margin="40,218,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold"/>
-        <TextBox x:Name="txt_timezone" HorizontalAlignment="Left" Margin="158,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="23"/>
+        <TextBox x:Name="txt_timezone" IsReadOnly="True" HorizontalAlignment="Left" Margin="158,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="23"/>
         <Button Content="Convert" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Width="230" Height="35" Click="convert_ClickButton"/>
     </Grid>
 </Window>
