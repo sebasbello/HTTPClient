@@ -1,19 +1,7 @@
 ﻿using HttpApiClient.Model.API;
-using HttpApiClient.Model.Object;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace HttpApiClient
 {
@@ -82,7 +70,7 @@ namespace HttpApiClient
             Double from_exchangeRate = 0.0;
             Double to_exchangeRate = 0.0;
             Double exchangeRate_relation = 0.0;
-            Double amount;
+            Double amount = 0.0;
 
             if (this.cbx_from.SelectedIndex != this.cbx_to.SelectedIndex && !string.IsNullOrEmpty(this.txt_amount_international.Text))
             {
@@ -97,15 +85,7 @@ namespace HttpApiClient
                         && serviceResponseSimple.ExchangeRate.Rates.TryGetValue(to_currency, out to_exchangeRate))
                     {
                         exchangeRate_relation = from_exchangeRate / to_exchangeRate;
-
-                        if (exchangeRate_relation < 1)
-                        {
-                            this.txt_result.Text = String.Format("{0:#,##0.00}", amount / exchangeRate_relation);
-                        }
-                        else
-                        {
-                            this.txt_result.Text = String.Format("{0:#,##0.00}", amount * exchangeRate_relation);
-                        }
+                        this.txt_result.Text = String.Format("{0:#,##0.00}", amount / exchangeRate_relation);
 
                         long updateTime = serviceResponseSimple.ExchangeRate.Timestamp;
                         DateTimeOffset.Now.ToUnixTimeSeconds();
