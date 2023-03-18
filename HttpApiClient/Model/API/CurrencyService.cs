@@ -1,17 +1,18 @@
 ﻿using HttpApiClient.Model.Object;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace HttpApiClient.Model.API
 {
-    public class ExchangeRateService
+    public class CurrencyService
     {
         private static readonly string BASE_URL = "https://openexchangerates.org/api/";
         private static readonly string APP_ID = "e77f99c02f404d34a3631b67223d85e5";
 
-        public static async Task<ServiceResponse> GetExchangeRateConversion()
+        public static async Task<ServiceResponse> GetCurrencies()
         {
             ServiceResponse serviceResponse = new ServiceResponse();
             using (var httpClient = new HttpClient())
@@ -20,7 +21,7 @@ namespace HttpApiClient.Model.API
                 HttpResponseMessage response;
                 try
                 {
-                    string url = string.Format("{0}latest.json?app_id={1}&prettyprint=false", BASE_URL, APP_ID);
+                    string url = string.Format("{0}currencies.json?app_id={1}&prettyprint=false", BASE_URL, APP_ID);
                     request = new HttpRequestMessage(HttpMethod.Get, url);
                     response = await httpClient.SendAsync(request);
 
@@ -28,17 +29,17 @@ namespace HttpApiClient.Model.API
                     {
                         if (response.IsSuccessStatusCode)
                         {
-                            ExchangeRate exchangeRate;
+                            Currency currency = new Currency();
                             String jsonstring = await response.Content.ReadAsStringAsync();
 
-                            exchangeRate = JsonConvert.DeserializeObject<ExchangeRate>(jsonstring);
+                            Dictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonstring);
+                            currency.Currencies = values;
 
-
-                            if (exchangeRate != null && exchangeRate.Disclaimer != null && exchangeRate.Rates != null)
+                            if (currency.Currencies != null)
                             {
                                 serviceResponse.Error = false;
                                 serviceResponse.Message = "OK";
-                                serviceResponse.ExchangeRate = exchangeRate;
+                                serviceResponse.Currencies = currency.Currencies;
                             }
                             else
                             {

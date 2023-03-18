@@ -12,5 +12,6 @@ namespace HttpApiClient.Model.API
         public bool Error { get; set; }
         public String Message { get; set; }
         public ExchangeRate ExchangeRate { get; set; }
+        public Dictionary<String, String> Currencies{ get; set; }
     }
 }

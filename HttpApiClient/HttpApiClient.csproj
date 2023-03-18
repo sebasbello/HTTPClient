@@ -77,8 +77,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\API\CurrencyService.cs" />
     <Compile Include="Model\API\ExchangeRateService.cs" />
     <Compile Include="Model\API\ServiceResponse.cs" />
+    <Compile Include="Model\Object\Currency.cs" />
     <Compile Include="Model\Object\ExchangeRate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
